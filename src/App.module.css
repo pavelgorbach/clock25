@@ -1,7 +1,6 @@
 .container {
   padding: 20px;
 }
-
 .main {
   display: grid; 
   grid-template-columns: auto auto;
@@ -9,28 +8,26 @@
   text-align: center;
   row-gap: 10px;
 }
-
 .title {
   grid-column-start: 1;
   grid-column-end: 3;
 }
-
 .timer {
   grid-column-start: 1;
   grid-column-end: 3;
 }
-
 .controls {
   display: grid;
   grid-template-columns: repeat(3, auto);
   row-gap: 10px;
 }
-
 .controlsLabel {
   grid-column-start: 1;
   grid-column-end: 4;
 }
-
+.control {
+  cursor: pointer;
+}
 .timer {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -41,18 +38,30 @@
     "play reset"
     "beep beep";
   row-gap: 10px;
+  align-items: center;
 }
 .timerLabel {
   grid-area: label;
 }
 .timeLeft {
   grid-area: time;
+  font-size: 40px;
+}
+.warn {
+  color: red
 }
 .startStop {
   grid-area: play;
+  font-size: 28px;
+  cursor: pointer;
 }
 .reset {
   grid-area: reset;
+  font-size: 28px;
+  cursor: pointer;
+}
+.reset:active {
+  opacity: .2
 }
 .beep {
   grid-area: beep;

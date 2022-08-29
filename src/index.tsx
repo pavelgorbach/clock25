@@ -1,17 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
+import { Timer } from './features/Timer'
 
-const root = ReactDOM.createRoot(
+const MyTimer = new Timer()
+
+ReactDOM.render(
+  <App timer={MyTimer}/>,
   document.getElementById('root') as HTMLElement
-)
-
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
 )
 
 reportWebVitals()
