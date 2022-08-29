@@ -1,0 +1,59 @@
+.container {
+  padding: 20px;
+}
+
+.main {
+  display: grid; 
+  grid-template-columns: auto auto;
+  justify-items: center;
+  text-align: center;
+  row-gap: 10px;
+}
+
+.title {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.timer {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  row-gap: 10px;
+}
+
+.controlsLabel {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.timer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "label label"
+    "time time"
+    "play reset"
+    "beep beep";
+  row-gap: 10px;
+}
+.timerLabel {
+  grid-area: label;
+}
+.timeLeft {
+  grid-area: time;
+}
+.startStop {
+  grid-area: play;
+}
+.reset {
+  grid-area: reset;
+}
+.beep {
+  grid-area: beep;
+}
